@@ -5,14 +5,9 @@ After=network.target
 
 [Service]
 Type=simple
-User=memos
-Group=memos
-Restart=always
-RestartSec=1
+User=kazuki
 ExecStart=/usr/bin/memos
-EnvironmentFile=-/etc/memos.conf
-WorkingDirectory=/var/lib/memos
-ReadWritePaths=/var/lib/memos
+EnvironmentFile=/etc/memos.conf
 
 [Install]
 WantedBy=multi-user.target
