@@ -13,13 +13,9 @@ backup=('etc/memos.conf')
 source=(
   "git+https://github.com/Kaz205/memos.git#branch=main"
   "systemd.service"
-  "sysusers.conf"
   "memos.conf"
-  'tmpfiles.conf'
 )
 sha512sums=('SKIP'
-            'SKIP'
-            'SKIP'
             'SKIP'
             'SKIP')
 
@@ -46,8 +42,6 @@ check(){
 
 package () {
   install -vDm644 systemd.service "$pkgdir/etc/systemd/system/${pkgname}.service"
-  install -vDm644 sysusers.conf "$pkgdir/usr/lib/sysusers.d/${pkgname}.conf"
-  install -vDm644 tmpfiles.conf "$pkgdir/usr/lib/tmpfiles.d/${pkgname}.conf"
   install -vDm644 memos.conf "$pkgdir/etc/memos.conf"
 
   cd "$pkgname"
