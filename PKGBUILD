@@ -2,7 +2,7 @@
 
 pkgname="memos"
 pkgver=0.19.1
-pkgrel=1
+pkgrel=2
 pkgdesc="A privacy-first, lightweight note-taking service. Easily capture and share your great thoughts."
 url="https://github.com/usememos/memos"
 arch=("any")
