@@ -1,8 +1,8 @@
 # Maintainer: Lindsay Zhou <i@lin.moe>
 
 pkgname="memos"
-pkgver=0.19.1
-pkgrel=3
+pkgver=0.20.0
+pkgrel=1
 pkgdesc="A privacy-first, lightweight note-taking service. Easily capture and share your great thoughts."
 url="https://github.com/usememos/memos"
 arch=("any")
@@ -27,7 +27,6 @@ build(){
     
     export PATH="$PATH:$srcdir/bin"
     pnpm install --store-dir=$srcdir/pnpm-store --frozen-lockfile
-    pnpm type-gen
     pnpm build
 
     cd "$srcdir/$pkgname"
