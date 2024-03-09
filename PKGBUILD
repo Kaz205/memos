@@ -1,7 +1,7 @@
 # Maintainer: Lindsay Zhou <i@lin.moe>
 
 pkgname="memos"
-pkgver=0.20.0
+pkgver=0.20.1
 pkgrel=1
 pkgdesc="A privacy-first, lightweight note-taking service. Easily capture and share your great thoughts."
 url="https://github.com/usememos/memos"
