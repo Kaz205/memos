@@ -1,7 +1,7 @@
 # Maintainer: Lindsay Zhou <i@lin.moe>
 
 pkgname="memos"
-pkgver=0.21.0
+pkgver=0.22.0
 pkgrel=1
 pkgdesc="A privacy-first, lightweight note-taking service. Easily capture and share your great thoughts."
 url="https://github.com/usememos/memos"
@@ -28,6 +28,7 @@ build(){
     export PATH="$PATH:$srcdir/bin"
     pnpm install --store-dir=$srcdir/pnpm-store --frozen-lockfile
     pnpm build
+    cp -r "dist" "$srcdir/$pkgname/server/router/frontend/"
 
     cd "$srcdir/$pkgname"
     GOEXPERIMENT=newinliner CGO_ENABLED=0 go build -o memos ./bin/memos/main.go
@@ -47,5 +48,4 @@ package () {
   install -Dm0644 LICENSE "$pkgdir/usr/share/licenses/${pkgname}/LICENSE"
 
   mkdir -p $pkgdir/usr/local/memos/
-  cp -r "web/dist" "$pkgdir/usr/local/memos/"
 }
