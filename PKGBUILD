@@ -45,7 +45,4 @@ package () {
 
   cd "$pkgname"
   install -Dm755 "memos" "$pkgdir/usr/bin/memos"
-  install -Dm0644 LICENSE "$pkgdir/usr/share/licenses/${pkgname}/LICENSE"
-
-  mkdir -p $pkgdir/usr/local/memos/
 }
