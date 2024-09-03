@@ -1,5 +1,5 @@
 pkgname="memos"
-pkgver=0.22.4
+pkgver=0.22.5
 pkgrel=1
 pkgdesc="A privacy-first, lightweight note-taking service. Easily capture and share your great thoughts."
 url="https://github.com/usememos/memos"
@@ -29,7 +29,7 @@ build(){
     cp -r "dist" "$srcdir/$pkgname/server/router/frontend/"
 
     cd "$srcdir/$pkgname"
-    GOEXPERIMENT=newinliner CGO_ENABLED=0 go build -o memos ./bin/memos/main.go
+    GOEXPERIMENT=newinliner CGO_ENABLED=0 go build -ldflags='-s -w' -trimpath -o memos ./bin/memos/main.go
 }
 
 check(){
