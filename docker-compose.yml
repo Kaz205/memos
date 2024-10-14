@@ -1,0 +1,10 @@
+services:
+  memos:
+    image: neosm
+    container_name: neosm
+    build:
+      context: .
+    volumes:
+      - ~/.memos/:/var/opt/memos
+    ports:
+      - 5230:5230
