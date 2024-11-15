@@ -1,7 +1,7 @@
 services:
   memos:
-    image: neosm
-    container_name: neosm
+    image: memos
+    container_name: memos
     build:
       context: .
     volumes:
