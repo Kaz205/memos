@@ -5,7 +5,7 @@ services:
     build:
       context: .
     volumes:
-      - ~/.memos/:/var/opt/memos
+      - /home/kazuki/.memos/:/var/opt/memos
     ports:
       - 5230:5230
     restart: always
