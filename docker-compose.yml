@@ -3,7 +3,7 @@ services:
     image: memos
     container_name: memos
     build:
-      context: .
+      context: scripts/.
     volumes:
       - /home/kazuki/.memos/:/var/opt/memos
     ports:
